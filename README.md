@@ -218,18 +218,18 @@ NSLog(@"mandiri charging : %@", dict);
 * Contoh hasil charging sukses :
 ```json
 {
-"res_amount" = "10000.00";
-"res_approval_code" = 3862000000;
-"res_bank" = "Mandiri Click Pay";
-"res_mcn" = "411111******1111";
-"res_message" = "PAYMENT APPROVED";
-"res_payment_date" = 20160614111626;
-"res_request_code" = 14061604162637432502;
-"res_response_code" = 0000;
-"res_response_msg" = SUCCESS;
-"res_session_id" = 6a5b6a576e23037b3aba634156fd8124a04bf5c2;
-"res_trans_id_merchant" = "invoice_1465852586";
-"res_transaction_code" = 4756b9f939a5c1557bf55d0e3bc8f47b34ca81e4;
+"res_amount": "10000.00",
+"res_approval_code": "3862000000",
+"res_bank": "Mandiri Click Pay",
+"res_mcn": "411111******1111",
+"res_message": "PAYMENT APPROVED",
+"res_payment_date": "20160614111626",
+"res_request_code": "1406160416263743250",
+"res_response_code": "0000",
+"res_response_msg": "SUCCES",
+"res_session_id": "6a5b6a576e23037b3aba634156fd8124a04bf5c2",
+"res_trans_id_merchant": "invoice_1465852586",
+"res_transaction_code": "4756b9f939a5c1557bf55d0e3bc8f47b34ca81e4"
 }
 ```
 **2.5.	Doku Wallet**
@@ -287,17 +287,17 @@ NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request pr
 * Contoh charging sukses dengan metode Cash Balance :
 ```json
 {
-"res_amount" = "15000.00";
-"res_data_email" = "dokutest1@techgroup.me";
-"res_data_mobile_phone" = 08123123112;
-"res_device_id" = 932998EFC771468FB7E78B698A0D7837;
-"res_name" = Dokutest1;
-"res_pairing_code" = 14061604280030827504;
-"res_payment_channel" = 04;
-"res_response_code" = 0000;
-"res_response_msg" = SUCCESS;
-"res_token_code" = 0000;
-"res_token_id" = 7bf6c696cbbce9becde1bb0b96e851cc4ac5ba71;
-"res_transaction_id" = 7668644704;
+"res_amount": "15000.00",
+"res_data_email": "dokutest1@techgroup.me",
+"res_data_mobile_phone": "08123123112",
+"res_device_id": "932998EFC771468FB7E78B698A0D7837",
+"res_name": "Dokutest1",
+"res_pairing_code": "14061604280030827504",
+"res_payment_channel": "04",
+"res_response_code": "0000",
+"res_response_msg": "SUCCESS",
+"res_token_code": "0000",
+"res_token_id": "7bf6c696cbbce9becde1bb0b96e851cc4ac5ba71",
+"res_transaction_id": "7668644704"
 }
 ```
