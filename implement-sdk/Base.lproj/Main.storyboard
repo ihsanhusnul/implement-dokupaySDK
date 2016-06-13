@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWa-2c-CDL">
+                                <rect key="frame" x="40" y="60" width="520" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UHr-SK-Wr5"/>
+                                </constraints>
+                                <state key="normal" title="pay with Credit Card (Doku)">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapCC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azv-QT-T8e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxc-iL-u5S">
+                                <rect key="frame" x="40" y="144" width="520" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rpM-L8-Gg9"/>
+                                </constraints>
+                                <state key="normal" title="pay with Virtual Account (Doku)">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapVA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iXn-KC-T5l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohY-1B-ZPw">
+                                <rect key="frame" x="40" y="228" width="520" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2BZ-6A-qoR"/>
+                                </constraints>
+                                <state key="normal" title="pay with Virtual Account (Doku)">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapVAMini:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ysK-tM-rc3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJb-oM-Cew">
+                                <rect key="frame" x="40" y="312" width="520" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PnT-iN-HvW"/>
+                                </constraints>
+                                <state key="normal" title="pay with Mandiri ClickPay (Doku)">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapMandiri:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jbN-Si-j1c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-Vu-3Ph">
+                                <rect key="frame" x="40" y="396" width="520" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6w2-Nd-TEU"/>
+                                </constraints>
+                                <state key="normal" title="pay with Wallet (Doku)">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapWallet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBs-HH-lwM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FJb-oM-Cew" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="9K7-47-r1O"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CWa-2c-CDL" secondAttribute="bottom" constant="295" id="AWB-j9-vDR"/>
+                            <constraint firstItem="Kxc-iL-u5S" firstAttribute="top" secondItem="CWa-2c-CDL" secondAttribute="bottom" constant="40" id="AxJ-Eh-H4K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FJb-oM-Cew" secondAttribute="trailing" constant="20" id="G3d-gf-41d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rsn-Vu-3Ph" secondAttribute="trailing" constant="20" id="IQ5-g6-1j3"/>
+                            <constraint firstItem="FJb-oM-Cew" firstAttribute="top" secondItem="ohY-1B-ZPw" secondAttribute="bottom" constant="40" id="IT3-Cs-Ecx"/>
+                            <constraint firstItem="Rsn-Vu-3Ph" firstAttribute="top" secondItem="FJb-oM-Cew" secondAttribute="bottom" constant="40" id="Jh0-oa-ejA"/>
+                            <constraint firstItem="ohY-1B-ZPw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="MFh-je-DUj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CWa-2c-CDL" secondAttribute="trailing" constant="20" id="SC6-9T-WnX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kxc-iL-u5S" secondAttribute="trailing" constant="20" id="Zk8-3U-JeJ"/>
+                            <constraint firstItem="CWa-2c-CDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="dye-HK-MLk"/>
+                            <constraint firstItem="CWa-2c-CDL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="255" id="gf4-ZP-Xke"/>
+                            <constraint firstItem="Rsn-Vu-3Ph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hoY-RM-mQf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ohY-1B-ZPw" secondAttribute="trailing" constant="20" id="ihT-OT-1j6"/>
+                            <constraint firstItem="CWa-2c-CDL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="o1m-yc-zXO"/>
+                            <constraint firstItem="ohY-1B-ZPw" firstAttribute="top" secondItem="Kxc-iL-u5S" secondAttribute="bottom" constant="40" id="qSB-Dg-lh0"/>
+                            <constraint firstItem="Kxc-iL-u5S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="uaW-ga-dJa"/>
+                            <constraint firstItem="CWa-2c-CDL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y9I-tf-mK2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gf4-ZP-Xke"/>
+                                <exclude reference="y9I-tf-mK2"/>
+                                <exclude reference="AWB-j9-vDR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

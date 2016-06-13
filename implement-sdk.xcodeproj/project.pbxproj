@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		481452891D0F22F200D525A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452881D0F22F200D525A9 /* main.m */; };
+		4814528C1D0F22F200D525A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4814528B1D0F22F200D525A9 /* AppDelegate.m */; };
+		4814528F1D0F22F200D525A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4814528E1D0F22F200D525A9 /* ViewController.m */; };
+		481452921D0F22F200D525A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481452901D0F22F200D525A9 /* Main.storyboard */; };
+		481452941D0F22F300D525A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481452931D0F22F300D525A9 /* Assets.xcassets */; };
+		481452971D0F22F300D525A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481452951D0F22F300D525A9 /* LaunchScreen.storyboard */; };
+		481452EA1D0F4A2F00D525A9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452D31D0F4A2F00D525A9 /* AFHTTPSessionManager.m */; };
+		481452EB1D0F4A2F00D525A9 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452D61D0F4A2F00D525A9 /* AFNetworkReachabilityManager.m */; };
+		481452EC1D0F4A2F00D525A9 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452D81D0F4A2F00D525A9 /* AFSecurityPolicy.m */; };
+		481452ED1D0F4A2F00D525A9 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452DA1D0F4A2F00D525A9 /* AFURLRequestSerialization.m */; };
+		481452EE1D0F4A2F00D525A9 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452DC1D0F4A2F00D525A9 /* AFURLResponseSerialization.m */; };
+		481452EF1D0F4A2F00D525A9 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452DE1D0F4A2F00D525A9 /* AFURLSessionManager.m */; };
+		481452F01D0F4A2F00D525A9 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452E11D0F4A2F00D525A9 /* SVIndefiniteAnimatedView.m */; };
+		481452F11D0F4A2F00D525A9 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452E31D0F4A2F00D525A9 /* SVProgressAnimatedView.m */; };
+		481452F21D0F4A2F00D525A9 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 481452E51D0F4A2F00D525A9 /* SVProgressHUD.bundle */; };
+		481452F31D0F4A2F00D525A9 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452E71D0F4A2F00D525A9 /* SVProgressHUD.m */; };
+		481452F41D0F4A2F00D525A9 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452E91D0F4A2F00D525A9 /* SVRadialGradientLayer.m */; };
+		481452FC1D0F53C700D525A9 /* DokuPay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 481452FA1D0F53C700D525A9 /* DokuPay.bundle */; };
+		481452FD1D0F53C700D525A9 /* DokuPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481452FB1D0F53C700D525A9 /* DokuPay.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		481452841D0F22F200D525A9 /* implement-sdk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "implement-sdk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		481452881D0F22F200D525A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4814528A1D0F22F200D525A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4814528B1D0F22F200D525A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4814528D1D0F22F200D525A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4814528E1D0F22F200D525A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		481452911D0F22F200D525A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		481452931D0F22F300D525A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		481452961D0F22F300D525A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		481452981D0F22F300D525A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481452D21D0F4A2F00D525A9 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		481452D31D0F4A2F00D525A9 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		481452D41D0F4A2F00D525A9 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		481452D51D0F4A2F00D525A9 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		481452D61D0F4A2F00D525A9 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		481452D71D0F4A2F00D525A9 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		481452D81D0F4A2F00D525A9 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		481452D91D0F4A2F00D525A9 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		481452DA1D0F4A2F00D525A9 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		481452DB1D0F4A2F00D525A9 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		481452DC1D0F4A2F00D525A9 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		481452DD1D0F4A2F00D525A9 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		481452DE1D0F4A2F00D525A9 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		481452E01D0F4A2F00D525A9 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		481452E11D0F4A2F00D525A9 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		481452E21D0F4A2F00D525A9 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		481452E31D0F4A2F00D525A9 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		481452E41D0F4A2F00D525A9 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		481452E51D0F4A2F00D525A9 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		481452E61D0F4A2F00D525A9 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		481452E71D0F4A2F00D525A9 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		481452E81D0F4A2F00D525A9 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		481452E91D0F4A2F00D525A9 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		481452FA1D0F53C700D525A9 /* DokuPay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DokuPay.bundle; sourceTree = "<group>"; };
+		481452FB1D0F53C700D525A9 /* DokuPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DokuPay.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		481452811D0F22F200D525A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				481452FD1D0F53C700D525A9 /* DokuPay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4814527B1D0F22F200D525A9 = {
+			isa = PBXGroup;
+			children = (
+				481452861D0F22F200D525A9 /* implement-sdk */,
+				481452851D0F22F200D525A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		481452851D0F22F200D525A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				481452841D0F22F200D525A9 /* implement-sdk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		481452861D0F22F200D525A9 /* implement-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				481452F51D0F4A3B00D525A9 /* DokuPay */,
+				481452D01D0F4A2F00D525A9 /* Library */,
+				4814528A1D0F22F200D525A9 /* AppDelegate.h */,
+				4814528B1D0F22F200D525A9 /* AppDelegate.m */,
+				4814528D1D0F22F200D525A9 /* ViewController.h */,
+				4814528E1D0F22F200D525A9 /* ViewController.m */,
+				481452901D0F22F200D525A9 /* Main.storyboard */,
+				481452931D0F22F300D525A9 /* Assets.xcassets */,
+				481452951D0F22F300D525A9 /* LaunchScreen.storyboard */,
+				481452981D0F22F300D525A9 /* Info.plist */,
+				481452871D0F22F200D525A9 /* Supporting Files */,
+			);
+			path = "implement-sdk";
+			sourceTree = "<group>";
+		};
+		481452871D0F22F200D525A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				481452881D0F22F200D525A9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		481452D01D0F4A2F00D525A9 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				481452D11D0F4A2F00D525A9 /* AFNetworking */,
+				481452DF1D0F4A2F00D525A9 /* SVProgressHUD */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		481452D11D0F4A2F00D525A9 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				481452D21D0F4A2F00D525A9 /* AFHTTPSessionManager.h */,
+				481452D31D0F4A2F00D525A9 /* AFHTTPSessionManager.m */,
+				481452D41D0F4A2F00D525A9 /* AFNetworking.h */,
+				481452D51D0F4A2F00D525A9 /* AFNetworkReachabilityManager.h */,
+				481452D61D0F4A2F00D525A9 /* AFNetworkReachabilityManager.m */,
+				481452D71D0F4A2F00D525A9 /* AFSecurityPolicy.h */,
+				481452D81D0F4A2F00D525A9 /* AFSecurityPolicy.m */,
+				481452D91D0F4A2F00D525A9 /* AFURLRequestSerialization.h */,
+				481452DA1D0F4A2F00D525A9 /* AFURLRequestSerialization.m */,
+				481452DB1D0F4A2F00D525A9 /* AFURLResponseSerialization.h */,
+				481452DC1D0F4A2F00D525A9 /* AFURLResponseSerialization.m */,
+				481452DD1D0F4A2F00D525A9 /* AFURLSessionManager.h */,
+				481452DE1D0F4A2F00D525A9 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		481452DF1D0F4A2F00D525A9 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				481452E01D0F4A2F00D525A9 /* SVIndefiniteAnimatedView.h */,
+				481452E11D0F4A2F00D525A9 /* SVIndefiniteAnimatedView.m */,
+				481452E21D0F4A2F00D525A9 /* SVProgressAnimatedView.h */,
+				481452E31D0F4A2F00D525A9 /* SVProgressAnimatedView.m */,
+				481452E41D0F4A2F00D525A9 /* SVProgressHUD-Prefix.pch */,
+				481452E51D0F4A2F00D525A9 /* SVProgressHUD.bundle */,
+				481452E61D0F4A2F00D525A9 /* SVProgressHUD.h */,
+				481452E71D0F4A2F00D525A9 /* SVProgressHUD.m */,
+				481452E81D0F4A2F00D525A9 /* SVRadialGradientLayer.h */,
+				481452E91D0F4A2F00D525A9 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		481452F51D0F4A3B00D525A9 /* DokuPay */ = {
+			isa = PBXGroup;
+			children = (
+				481452FA1D0F53C700D525A9 /* DokuPay.bundle */,
+				481452FB1D0F53C700D525A9 /* DokuPay.framework */,
+			);
+			path = DokuPay;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		481452831D0F22F200D525A9 /* implement-sdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4814529B1D0F22F300D525A9 /* Build configuration list for PBXNativeTarget "implement-sdk" */;
+			buildPhases = (
+				481452801D0F22F200D525A9 /* Sources */,
+				481452811D0F22F200D525A9 /* Frameworks */,
+				481452821D0F22F200D525A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "implement-sdk";
+			productName = "implement-sdk";
+			productReference = 481452841D0F22F200D525A9 /* implement-sdk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4814527C1D0F22F200D525A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Doku;
+				TargetAttributes = {
+					481452831D0F22F200D525A9 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4814527F1D0F22F200D525A9 /* Build configuration list for PBXProject "implement-sdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4814527B1D0F22F200D525A9;
+			productRefGroup = 481452851D0F22F200D525A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				481452831D0F22F200D525A9 /* implement-sdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		481452821D0F22F200D525A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				481452F21D0F4A2F00D525A9 /* SVProgressHUD.bundle in Resources */,
+				481452FC1D0F53C700D525A9 /* DokuPay.bundle in Resources */,
+				481452971D0F22F300D525A9 /* LaunchScreen.storyboard in Resources */,
+				481452941D0F22F300D525A9 /* Assets.xcassets in Resources */,
+				481452921D0F22F200D525A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		481452801D0F22F200D525A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				481452EF1D0F4A2F00D525A9 /* AFURLSessionManager.m in Sources */,
+				4814528F1D0F22F200D525A9 /* ViewController.m in Sources */,
+				481452F11D0F4A2F00D525A9 /* SVProgressAnimatedView.m in Sources */,
+				4814528C1D0F22F200D525A9 /* AppDelegate.m in Sources */,
+				481452EB1D0F4A2F00D525A9 /* AFNetworkReachabilityManager.m in Sources */,
+				481452F31D0F4A2F00D525A9 /* SVProgressHUD.m in Sources */,
+				481452891D0F22F200D525A9 /* main.m in Sources */,
+				481452F01D0F4A2F00D525A9 /* SVIndefiniteAnimatedView.m in Sources */,
+				481452EC1D0F4A2F00D525A9 /* AFSecurityPolicy.m in Sources */,
+				481452F41D0F4A2F00D525A9 /* SVRadialGradientLayer.m in Sources */,
+				481452ED1D0F4A2F00D525A9 /* AFURLRequestSerialization.m in Sources */,
+				481452EE1D0F4A2F00D525A9 /* AFURLResponseSerialization.m in Sources */,
+				481452EA1D0F4A2F00D525A9 /* AFHTTPSessionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		481452901D0F22F200D525A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				481452911D0F22F200D525A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		481452951D0F22F300D525A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				481452961D0F22F300D525A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		481452991D0F22F300D525A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4814529A1D0F22F300D525A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4814529C1D0F22F300D525A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/implement-sdk/DokuPay",
+				);
+				INFOPLIST_FILE = "implement-sdk/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.doku.implement-sdk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4814529D1D0F22F300D525A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/implement-sdk/DokuPay",
+				);
+				INFOPLIST_FILE = "implement-sdk/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.doku.implement-sdk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4814527F1D0F22F200D525A9 /* Build configuration list for PBXProject "implement-sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				481452991D0F22F300D525A9 /* Debug */,
+				4814529A1D0F22F300D525A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4814529B1D0F22F300D525A9 /* Build configuration list for PBXNativeTarget "implement-sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4814529C1D0F22F300D525A9 /* Debug */,
+				4814529D1D0F22F300D525A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4814527C1D0F22F200D525A9 /* Project object */;
+}
