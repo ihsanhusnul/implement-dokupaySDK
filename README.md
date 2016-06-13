@@ -1,20 +1,20 @@
-# implement-dokupaySDK
+## 1 implement-dokupaySDK
 
-Inisialisasi DokuPay SDK
+**1.1.	Inisial DokuPay framework ke dalam projek**
+* Salin folder Dokupay yang berisi Dokupay.framework dan DokuPay.bundle ke dalam folder projek.
+* Pilih projek dan tekan control+click, pilih ‘Add Files to …’ arahkan ke folder DokuPay yang telah di di salin.
+* Pastikan DokuPay.framework sudah ada di list ‘General’ -> ‘Linked Frameworks and Libraries’.
+* Pastikan DokuPay.bundle sudah ada di list ‘Build Phases’ -> ‘Copy Bundle Resources’.
+* Panggil class DokuPay.h dari framework dengan ‘#import <DokuPay/DokuPay.h>’
+* Tambahkan ‘<DokuPayDelegate>’ di interface class projek.
 
-1.1.	Inisial DokuPay framework ke dalam projek
-Salin folder Dokupay yang berisi Dokupay.framework dan DokuPay.bundle ke dalam folder projek.
-Pilih projek dan tekan control+click, pilih ‘Add Files to …’ arahkan ke folder DokuPay yang telah di di salin.
-Pastikan DokuPay.framework sudah ada di list ‘General’ -> ‘Linked Frameworks and Libraries’.
-Pastikan DokuPay.bundle sudah ada di list ‘Build Phases’ -> ‘Copy Bundle Resources’.
-Panggil class DokuPay.h dari framework dengan ‘#import <DokuPay/DokuPay.h>’
-Tambahkan ‘<DokuPayDelegate>’ di interface class projek.
+**1.2.	Dependencies**
+* Tambahkan SVProgressHUD (https://github.com/SVProgressHUD/SVProgressHUD) ke projek.
+* Pastikan SVProgressHUD.bundle sudah ada di list ‘Build Phases’ -> ‘Copy Bundle Resources’.
 
-1.2.	Dependencies
-SVProgressHUD (https://github.com/SVProgressHUD/SVProgressHUD), pastikan SVProgressHUD.bundle sudah ada di list ‘Build Phases’ -> ‘Copy Bundle Resources’.
-
-1.3.	DKPAymentItem
--	Contoh Inisial DKPaymentItem :
+**1.3.	DKPAymentItem**
+* Contoh Inisial DKPaymentItem :
+```ObjC
 -(DKPaymentItem*)getPaymentItem
 {
 DKPaymentItem *paymentItem = [[DKPaymentItem alloc] init];
@@ -37,57 +37,25 @@ paymentItem.mobilePhone = @"08123123112";
 
 return paymentItem;
 }
+```
 
 
-
-1.4.	UUID device
-Mendapatkan UUID device
+**1.4. UUID device**
+* Mendapatkan UUID (device id)
+```ObjC
 -(NSString*)getMyUUID
 {
 NSString *uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 return [uuid stringByReplacingOccurrencesOfString:@"-" withString:@""];
 }
+```
 
 
+## 2. Implementasi DokuPay Payment Channel**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2. Implementasi DokuPay Payment Channel
-
-2.1.	Credit Card
-Tambahkan seting ke dalam file .plist projek 
-App Transport Security policy
+**2.1.	Credit Card**
+* Tambahkan seting ke dalam file .plist projek (App Transport Security policy)
+```XML
 ...
 <key>NSAppTransportSecurity</key>
 <dict>
@@ -105,7 +73,9 @@ App Transport Security policy
 </dict>
 </dict>
 ...
-Di action/selector method projek, ketika pilihan payment Credit Card dipilih biarkan sdk DokuPay melanjutkan nya :
+```
+* Di action/selector method projek, ketika pilihan payment Credit Card dipilih biarkan sdk DokuPay melanjutkan nya :
+```ObjC
 ...
 DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;    
 [[DokuPay sharedInstance] setPaymentItem:paymentItem];
@@ -113,8 +83,10 @@ DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;
 [[DokuPay sharedInstance] setDelegate:self];
 [[DokuPay sharedInstance] presentPayment];
 ...
+```
 
-Class projek bisa mendapatkan response dari sdk DokuPay dengan membuat method :
+* Class projek bisa mendapatkan response dari sdk DokuPay dengan membuat method :
+```ObjC
 -(void)onDokuPaySuccess:(NSDictionary *)dictData
 {
 NSLog(@"catch Success delegate : %@", dictData);
@@ -124,8 +96,9 @@ NSLog(@"catch Success delegate : %@", dictData);
 {
 NSLog(@"catch Error delegate : %@", error);
 }
-
-Setelah response didapat projek bisa melakukan charge :
+```
+* Setelah response didapat projek bisa melakukan charge :
+```ObjC
 NSURL *URL = [NSURL URLWithString:@"http://crm.doku.com/doku-library/example-payment-mobile/merchant-example.php
 "];
 
@@ -150,11 +123,12 @@ NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request pr
 [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
 [SVProgressHUD showWithStatus:@"Mohon Tunggu..."];
 [task resume];
+```
 
 
-
-2.2.	Virtual Account
--	Sederhana, di action/selector method projek, ketika pilihan payment Virtual Account dipilih :
+**2.2.	Virtual Account**
+* Sederhana, di action/selector method projek, ketika pilihan payment Virtual Account dipilih :
+```ObjC
 ...
 DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;    
 [[DokuPay sharedInstance] setPaymentItem:paymentItem];
@@ -163,9 +137,10 @@ DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;
 [[DokuPay sharedInstance] setDelegate:self];
 [[DokuPay sharedInstance] presentPayment];
 ...
-
-2.3.	Virtual Account Mini
--	Sederhana, di action/selector method projek, ketika pilihan payment Virtual Account dipilih :
+```
+**2.3.	Virtual Account Mini**
+* Sederhana, di action/selector method projek, ketika pilihan payment Virtual Account dipilih :
+```ObjC
 ...
 DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;    
 [[DokuPay sharedInstance] setPaymentItem:paymentItem];
@@ -173,9 +148,10 @@ DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;
 [[DokuPay sharedInstance] setDelegate:self];
 [[DokuPay sharedInstance] presentPayment];
 ...
-
-2.4.	Mandiri ClickPay
--	Di action/selector method projek, ketika pilihan payment Mandiri ClickPay dipilih :
+```
+**2.4.	Mandiri ClickPay**
+* Di action/selector method projek, ketika pilihan payment Mandiri ClickPay dipilih :
+```ObjC
 ...
 DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;    
 [[DokuPay sharedInstance] setPaymentItem:paymentItem];
@@ -183,7 +159,9 @@ DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;
 [[DokuPay sharedInstance] setDelegate:self];
 [[DokuPay sharedInstance] presentPayment];
 ...
--	Tambahkan seting .plist berikut :
+```
+* Tambahkan seting .plist berikut :
+```XML
 …
 <dict>
 <key>doku.com</key>
@@ -195,8 +173,9 @@ DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;
 </dict>
 </dict>
 … 
-
--	Buat method untuk mendapatkan response dari sdk, langkah selanjutnya app merchant melakukan charge :
+```
+*Buat method untuk mendapatkan response dari sdk, langkah selanjutnya app merchant melakukan charge :
+```ObjC
 -(void)onDokuMandiriPaySuccess:(NSDictionary*)response
 {
 NSDictionary *dict = @{@"req_challenge_code_3": [response objectForKey:@"challenge3"],
@@ -235,7 +214,9 @@ NSLog(@"mandiri charging : %@", dict);
 [SVProgressHUD showWithStatus:@"Mohon Tunggu..."];
 [task resume];
 }
--	Contoh hasil charging sukses :
+```
+* Contoh hasil charging sukses :
+```json
 {
 "res_amount" = "10000.00";
 "res_approval_code" = 3862000000;
@@ -250,9 +231,10 @@ NSLog(@"mandiri charging : %@", dict);
 "res_trans_id_merchant" = "invoice_1465852586";
 "res_transaction_code" = 4756b9f939a5c1557bf55d0e3bc8f47b34ca81e4;
 }
-
-2.5.	Doku Wallet
--	Sperti biasa, di action/selector method projek, ketika pilihan payment Doku Wallet dipilih :
+```
+**2.5.	Doku Wallet**
+* Seperti biasa, di action/selector method projek, ketika pilihan payment Doku Wallet dipilih :
+```ObjC
 ...
 DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;    
 [[DokuPay sharedInstance] setPaymentItem:paymentItem];
@@ -260,7 +242,10 @@ DKPaymentItem *paymentItem = … inisial DKPaymentItem ...;
 [[DokuPay sharedInstance] setDelegate:self];
 [[DokuPay sharedInstance] presentPayment];
 ...
--	Hasil sdk bisa di dapatkan di method delegate DokuPay, buatlah method berikut di class projek :
+```
+
+* Hasil sdk bisa di dapatkan di method delegate DokuPay, buatlah method berikut di class projek :
+```ObjC
 -(void)onDokuPaySuccess:(NSDictionary *)dictData
 {
 NSLog(@"catch Success delegate : %@", dictData);
@@ -270,8 +255,10 @@ NSLog(@"catch Success delegate : %@", dictData);
 {
 NSLog(@"catch Error delegate : %@", error);
 }
+```
 
--	Selanjutnya app merchant bisa melakukan charging, seperti berikut :
+* Selanjutnya app merchant bisa melakukan charging, seperti berikut :
+```ObjC
 NSURL *URL = [NSURL URLWithString:@"http://crm.doku.com/doku-library/example-payment-mobile/merchant-example.php
 "];
 
@@ -296,8 +283,9 @@ NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request pr
 [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
 [SVProgressHUD showWithStatus:@"Mohon Tunggu..."];
 [task resume];
-
--	Contoh charging sukses dengan metode Cash Balance :
+```
+* Contoh charging sukses dengan metode Cash Balance :
+```json
 {
 "res_amount" = "15000.00";
 "res_data_email" = "dokutest1@techgroup.me";
@@ -312,4 +300,4 @@ NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request pr
 "res_token_id" = 7bf6c696cbbce9becde1bb0b96e851cc4ac5ba71;
 "res_transaction_id" = 7668644704;
 }
-
+```
