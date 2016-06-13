@@ -26,6 +26,7 @@
 		481452F41D0F4A2F00D525A9 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 481452E91D0F4A2F00D525A9 /* SVRadialGradientLayer.m */; };
 		481452FC1D0F53C700D525A9 /* DokuPay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 481452FA1D0F53C700D525A9 /* DokuPay.bundle */; };
 		481452FD1D0F53C700D525A9 /* DokuPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481452FB1D0F53C700D525A9 /* DokuPay.framework */; };
+		481453001D0F6C7A00D525A9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 481452FF1D0F6C7A00D525A9 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		481452E91D0F4A2F00D525A9 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		481452FA1D0F53C700D525A9 /* DokuPay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DokuPay.bundle; sourceTree = "<group>"; };
 		481452FB1D0F53C700D525A9 /* DokuPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DokuPay.framework; sourceTree = "<group>"; };
+		481452FF1D0F6C7A00D525A9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		4814527B1D0F22F200D525A9 = {
 			isa = PBXGroup;
 			children = (
+				481452FF1D0F6C7A00D525A9 /* README.md */,
 				481452861D0F22F200D525A9 /* implement-sdk */,
 				481452851D0F22F200D525A9 /* Products */,
 			);
@@ -257,6 +260,7 @@
 				481452F01D0F4A2F00D525A9 /* SVIndefiniteAnimatedView.m in Sources */,
 				481452EC1D0F4A2F00D525A9 /* AFSecurityPolicy.m in Sources */,
 				481452F41D0F4A2F00D525A9 /* SVRadialGradientLayer.m in Sources */,
+				481453001D0F6C7A00D525A9 /* README.md in Sources */,
 				481452ED1D0F4A2F00D525A9 /* AFURLRequestSerialization.m in Sources */,
 				481452EE1D0F4A2F00D525A9 /* AFURLResponseSerialization.m in Sources */,
 				481452EA1D0F4A2F00D525A9 /* AFHTTPSessionManager.m in Sources */,
