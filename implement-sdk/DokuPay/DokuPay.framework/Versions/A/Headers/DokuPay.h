@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DKPaymentItem.h"
 #import "DKNavigationController.h"
+#import "DKLayout.h"
 
 
 @protocol DokuPayDelegate <NSObject>
@@ -28,9 +29,9 @@
 
 
 @property (nonnull, nonatomic, strong) DKNavigationController *navController;
-@property (nonnull, nonatomic, strong) NSString *paymentChannel;
-@property (nonnull, nonatomic, strong) DKPaymentItem *paymentItem;
-
+@property (nullable, nonatomic, strong) NSString *paymentChannel;
+@property (nullable, nonatomic, strong) DKPaymentItem *paymentItem;
+@property (nullable, nonatomic, strong) DKLayout *layout;
 @property (nullable, nonatomic, weak) id<DokuPayDelegate>delegate;
 
 -(void)presentPayment;
@@ -39,8 +40,6 @@
 -(void)onSuccess:(nonnull NSDictionary*)responseDict;
 -(void)onError:(nonnull NSError*)error;
 -(void)onMandiriSuccess:(nonnull NSDictionary*)dictData;
-
--(nonnull UIActivityIndicatorView*)indicatorHUD;
 
 +(nonnull id)sharedInstance;
 

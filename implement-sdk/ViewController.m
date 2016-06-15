@@ -12,7 +12,9 @@
 #import "SVProgressHUD.h"
 
 @interface ViewController () <DokuPayDelegate>
-
+{
+    DKLayout *dokuLayout;
+}
 @end
 
 @implementation ViewController
@@ -25,6 +27,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // setup DKLayout
+    dokuLayout = [[DKLayout alloc] init];
+    dokuLayout.toolbarColor = [UIColor redColor];
+    dokuLayout.toolbarTextColor = [UIColor greenColor];
+    dokuLayout.toolbarTintColor = [UIColor whiteColor];
+    dokuLayout.fieldTextColor = [UIColor blueColor];
+    dokuLayout.labelTextColor = [UIColor orangeColor];
+    dokuLayout.BGColor = [UIColor lightGrayColor];
+    dokuLayout.buttonTextColor = [UIColor yellowColor];
+    dokuLayout.buttonBGColor = [UIColor darkGrayColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +47,7 @@
 - (IBAction)tapCC:(id)sender
 {
     DKPaymentItem *paymentItem = [self getPaymentItem];
-    
+    [[DokuPay sharedInstance] setLayout:dokuLayout];
     [[DokuPay sharedInstance] setPaymentItem:paymentItem];
     [[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeCC];
     [[DokuPay sharedInstance] setDelegate:self];
@@ -45,7 +57,7 @@
 - (IBAction)tapVA:(id)sender
 {
     DKPaymentItem *paymentItem = [self getPaymentItem];
-    
+    [[DokuPay sharedInstance] setLayout:dokuLayout];
     [[DokuPay sharedInstance] setPaymentItem:paymentItem];
     [[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeVirtualAccount];
     [[DokuPay sharedInstance] setDelegate:self];
@@ -55,7 +67,7 @@
 - (IBAction)tapVAMini:(id)sender
 {
     DKPaymentItem *paymentItem = [self getPaymentItem];
-    
+    [[DokuPay sharedInstance] setLayout:dokuLayout];
     [[DokuPay sharedInstance] setPaymentItem:paymentItem];
     [[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeVirtualMini];
     [[DokuPay sharedInstance] setDelegate:self];
@@ -65,7 +77,7 @@
 - (IBAction)tapMandiri:(id)sender
 {
     DKPaymentItem *paymentItem = [self getPaymentItem];
-    
+    [[DokuPay sharedInstance] setLayout:dokuLayout];
     [[DokuPay sharedInstance] setPaymentItem:paymentItem];
     [[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeMandiriClickPay];
     [[DokuPay sharedInstance] setDelegate:self];
@@ -75,7 +87,7 @@
 - (IBAction)tapWallet:(id)sender
 {
     DKPaymentItem *paymentItem = [self getPaymentItem];
-    
+    [[DokuPay sharedInstance] setLayout:dokuLayout];
     [[DokuPay sharedInstance] setPaymentItem:paymentItem];
     [[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeWallet];
     [[DokuPay sharedInstance] setDelegate:self];

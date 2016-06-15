@@ -301,3 +301,30 @@ NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request pr
 "res_transaction_id": "7668644704"
 }
 ```
+
+## 3. Implementasi DokuPay Custom Layout**
+DokuPay telah menyediakan class DKLayout untuk menyimpan setingan layout, berikut contoh inisial dan setingan nya : 
+```ObjC
+...
+dokuLayout = [[DKLayout alloc] init];
+dokuLayout.toolbarColor = [UIColor redColor];
+dokuLayout.toolbarTextColor = [UIColor greenColor];
+dokuLayout.toolbarTintColor = [UIColor whiteColor];
+dokuLayout.fieldTextColor = [UIColor blueColor];
+dokuLayout.labelTextColor = [UIColor orangeColor];
+dokuLayout.BGColor = [UIColor lightGrayColor];
+dokuLayout.buttonTextColor = [UIColor yellowColor];
+dokuLayout.buttonBGColor = [UIColor darkGrayColor];
+...
+```
+Setelah DKLayout di inisial kan, set ke class SDK seperti berikut :
+```ObjC
+...
+DKPaymentItem *paymentItem = [self getPaymentItem];
+[[DokuPay sharedInstance] setLayout:dokuLayout];
+[[DokuPay sharedInstance] setPaymentItem:paymentItem];
+[[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeCC];
+[[DokuPay sharedInstance] setDelegate:self];
+[[DokuPay sharedInstance] presentPayment];
+...
+```
