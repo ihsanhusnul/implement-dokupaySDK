@@ -51,7 +51,7 @@ return [uuid stringByReplacingOccurrencesOfString:@"-" withString:@""];
 ```
 
 
-## 2. Implementasi DokuPay Payment Channel**
+## 2. Implementasi DokuPay Payment Channel
 
 **2.1.	Credit Card**
 * Tambahkan seting ke dalam file .plist projek (App Transport Security policy)
@@ -302,7 +302,7 @@ NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request pr
 }
 ```
 
-## 3. Implementasi DokuPay Custom Layout**
+## 3. Implementasi DokuPay Custom Layout
 DokuPay telah menyediakan class DKLayout untuk menyimpan setingan layout, berikut contoh inisial dan setingan nya : 
 ```ObjC
 ...
@@ -326,5 +326,79 @@ DKPaymentItem *paymentItem = [self getPaymentItem];
 [[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeCC];
 [[DokuPay sharedInstance] setDelegate:self];
 [[DokuPay sharedInstance] presentPayment];
+...
+```
+## 4. Implementasi Virtual Account
+Yang membedakan hanya pada parameter payment channel :
+```ObjC
+[[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeVirtualAccount];
+```
+berikut contoh lengkap nya :
+```ObjC
+DKPaymentItem *paymentItem = [[DKPaymentItem alloc] init];
+NSArray *basket = @[@{@"name":@"sayur",@"amount":@"10000.00",@"quantity":@"1",@"subtotal":@"10000.00"},
+@{@"name":@"buah",@"amount":@"10000.00",@"quantity":@"1",@"subtotal":@"10000.00"}];
+paymentItem.dataAmount = @"15000.00";
+paymentItem.dataBasket = basket;
+paymentItem.dataImei = [self getMyUUID];
+paymentItem.dataCurrency = @"360";
+paymentItem.dataMerchantChain = @"NA";
+paymentItem.dataSessionID = … session ID app merchant ... ;
+paymentItem.dataTransactionID = … kode transaksi merchant ...;
+paymentItem.isProduction = false;
+paymentItem.dataMerchantCode = MerchantSharedMallID;
+paymentItem.publicKey = MerchantPublicKey;
+paymentItem.sharedKey = MerchantSharedKey;
+paymentItem.dataWords = [paymentItem generateWords];
+paymentItem.mobilePhone = @"08123123112";
+
+DKPaymentItem *paymentItem = paymentItem;    
+[[DokuPay sharedInstance] setPaymentItem:paymentItem];
+[[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeVirtualAccount];
+[[DokuPay sharedInstance] setDelegate:self];
+[[DokuPay sharedInstance] presentPayment];
+...
+```
+
+## 5. Implementasi Virtual Account Minimarket
+Yang membedakan hanya pada parameter payment channel :
+```ObjC
+[[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeVirtualMini];
+```
+
+## 6. Implementasi Regular Credit Card First Tokenization
+Yang membedakan hanya parameter customerID.
+```ObjC
+...
+paymentItem.customerID = @"12124";
+...
+```
+Lengkapnya...
+```ObjC
+DKPaymentItem *paymentItem = [[DKPaymentItem alloc] init];
+NSArray *basket = @[@{@"name":@"sayur",@"amount":@"10000.00",@"quantity":@"1",@"subtotal":@"10000.00"},
+@{@"name":@"buah",@"amount":@"10000.00",@"quantity":@"1",@"subtotal":@"10000.00"}];
+
+paymentItem.dataAmount = @"15000.00";
+paymentItem.dataBasket = basket;
+paymentItem.dataImei = [self getMyUUID];
+paymentItem.dataCurrency = @"360";
+paymentItem.dataMerchantChain = @"NA";
+paymentItem.dataSessionID = … session ID app merchant ... ;
+paymentItem.dataTransactionID = … kode transaksi merchant ...;
+paymentItem.isProduction = false;
+paymentItem.dataMerchantCode = MerchantSharedMallID;
+paymentItem.publicKey = MerchantPublicKey;
+paymentItem.sharedKey = MerchantSharedKey;
+paymentItem.dataWords = [paymentItem generateWords];
+paymentItem.mobilePhone = @"08123123112";
+paymentItem.customerID = @"12124";
+```
+
+## 7. Implementasi Regular Credit Card Second Tokenization
+Tambahkan parameter tokenPayment di DKPaymentItem.
+```ObjC
+...
+paymentItem.tokenPayment = @"0bea1c1c653dbc8e1e6c24155c629fe237325a06";
 ...
 ```
