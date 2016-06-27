@@ -27,6 +27,16 @@
 		481452FC1D0F53C700D525A9 /* DokuPay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 481452FA1D0F53C700D525A9 /* DokuPay.bundle */; };
 		481452FD1D0F53C700D525A9 /* DokuPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481452FB1D0F53C700D525A9 /* DokuPay.framework */; };
 		481453001D0F6C7A00D525A9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 481452FF1D0F6C7A00D525A9 /* README.md */; };
+		48DF4A5C1D20E562007B5ACB /* ico_arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A531D20E562007B5ACB /* ico_arrow_left.png */; };
+		48DF4A5D1D20E562007B5ACB /* ico_payment_failed.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A541D20E562007B5ACB /* ico_payment_failed.png */; };
+		48DF4A5E1D20E562007B5ACB /* ico_payment_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A551D20E562007B5ACB /* ico_payment_success.png */; };
+		48DF4A5F1D20E562007B5ACB /* ico_pc_cc.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A561D20E562007B5ACB /* ico_pc_cc.png */; };
+		48DF4A601D20E562007B5ACB /* ico_pc_doku.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A571D20E562007B5ACB /* ico_pc_doku.png */; };
+		48DF4A611D20E562007B5ACB /* ico_pc_mandiriclickpay.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A581D20E562007B5ACB /* ico_pc_mandiriclickpay.png */; };
+		48DF4A621D20E562007B5ACB /* ico_pc_va.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A591D20E562007B5ACB /* ico_pc_va.png */; };
+		48DF4A631D20E562007B5ACB /* ico_pc_va_marchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A5A1D20E562007B5ACB /* ico_pc_va_marchant.png */; };
+		48DF4A641D20E562007B5ACB /* img_shoes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48DF4A5B1D20E562007B5ACB /* img_shoes.jpg */; };
+		48DF4A671D20E5B0007B5ACB /* NotifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DF4A661D20E5B0007B5ACB /* NotifViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +76,17 @@
 		481452FA1D0F53C700D525A9 /* DokuPay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DokuPay.bundle; sourceTree = "<group>"; };
 		481452FB1D0F53C700D525A9 /* DokuPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DokuPay.framework; sourceTree = "<group>"; };
 		481452FF1D0F6C7A00D525A9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		48DF4A531D20E562007B5ACB /* ico_arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_arrow_left.png; sourceTree = "<group>"; };
+		48DF4A541D20E562007B5ACB /* ico_payment_failed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_payment_failed.png; sourceTree = "<group>"; };
+		48DF4A551D20E562007B5ACB /* ico_payment_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_payment_success.png; sourceTree = "<group>"; };
+		48DF4A561D20E562007B5ACB /* ico_pc_cc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_pc_cc.png; sourceTree = "<group>"; };
+		48DF4A571D20E562007B5ACB /* ico_pc_doku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_pc_doku.png; sourceTree = "<group>"; };
+		48DF4A581D20E562007B5ACB /* ico_pc_mandiriclickpay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_pc_mandiriclickpay.png; sourceTree = "<group>"; };
+		48DF4A591D20E562007B5ACB /* ico_pc_va.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_pc_va.png; sourceTree = "<group>"; };
+		48DF4A5A1D20E562007B5ACB /* ico_pc_va_marchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_pc_va_marchant.png; sourceTree = "<group>"; };
+		48DF4A5B1D20E562007B5ACB /* img_shoes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img_shoes.jpg; sourceTree = "<group>"; };
+		48DF4A651D20E5B0007B5ACB /* NotifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifViewController.h; sourceTree = "<group>"; };
+		48DF4A661D20E5B0007B5ACB /* NotifViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +121,15 @@
 		481452861D0F22F200D525A9 /* implement-sdk */ = {
 			isa = PBXGroup;
 			children = (
+				48DF4A521D20E562007B5ACB /* Images */,
 				481452F51D0F4A3B00D525A9 /* DokuPay */,
 				481452D01D0F4A2F00D525A9 /* Library */,
 				4814528A1D0F22F200D525A9 /* AppDelegate.h */,
 				4814528B1D0F22F200D525A9 /* AppDelegate.m */,
 				4814528D1D0F22F200D525A9 /* ViewController.h */,
 				4814528E1D0F22F200D525A9 /* ViewController.m */,
+				48DF4A651D20E5B0007B5ACB /* NotifViewController.h */,
+				48DF4A661D20E5B0007B5ACB /* NotifViewController.m */,
 				481452901D0F22F200D525A9 /* Main.storyboard */,
 				481452931D0F22F300D525A9 /* Assets.xcassets */,
 				481452951D0F22F300D525A9 /* LaunchScreen.storyboard */,
@@ -178,6 +202,22 @@
 			path = DokuPay;
 			sourceTree = "<group>";
 		};
+		48DF4A521D20E562007B5ACB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				48DF4A531D20E562007B5ACB /* ico_arrow_left.png */,
+				48DF4A541D20E562007B5ACB /* ico_payment_failed.png */,
+				48DF4A551D20E562007B5ACB /* ico_payment_success.png */,
+				48DF4A561D20E562007B5ACB /* ico_pc_cc.png */,
+				48DF4A571D20E562007B5ACB /* ico_pc_doku.png */,
+				48DF4A581D20E562007B5ACB /* ico_pc_mandiriclickpay.png */,
+				48DF4A591D20E562007B5ACB /* ico_pc_va.png */,
+				48DF4A5A1D20E562007B5ACB /* ico_pc_va_marchant.png */,
+				48DF4A5B1D20E562007B5ACB /* img_shoes.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,10 +276,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				481452F21D0F4A2F00D525A9 /* SVProgressHUD.bundle in Resources */,
+				48DF4A611D20E562007B5ACB /* ico_pc_mandiriclickpay.png in Resources */,
+				48DF4A5F1D20E562007B5ACB /* ico_pc_cc.png in Resources */,
 				481452FC1D0F53C700D525A9 /* DokuPay.bundle in Resources */,
+				48DF4A641D20E562007B5ACB /* img_shoes.jpg in Resources */,
+				48DF4A601D20E562007B5ACB /* ico_pc_doku.png in Resources */,
+				48DF4A5E1D20E562007B5ACB /* ico_payment_success.png in Resources */,
 				481452971D0F22F300D525A9 /* LaunchScreen.storyboard in Resources */,
+				48DF4A621D20E562007B5ACB /* ico_pc_va.png in Resources */,
 				481452941D0F22F300D525A9 /* Assets.xcassets in Resources */,
+				48DF4A5C1D20E562007B5ACB /* ico_arrow_left.png in Resources */,
+				48DF4A631D20E562007B5ACB /* ico_pc_va_marchant.png in Resources */,
 				481452921D0F22F200D525A9 /* Main.storyboard in Resources */,
+				48DF4A5D1D20E562007B5ACB /* ico_payment_failed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DF4A671D20E5B0007B5ACB /* NotifViewController.m in Sources */,
 				481452EF1D0F4A2F00D525A9 /* AFURLSessionManager.m in Sources */,
 				4814528F1D0F22F200D525A9 /* ViewController.m in Sources */,
 				481452F11D0F4A2F00D525A9 /* SVProgressAnimatedView.m in Sources */,
@@ -420,6 +470,7 @@
 				4814529D1D0F22F300D525A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
