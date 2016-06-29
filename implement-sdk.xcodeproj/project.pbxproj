@@ -430,6 +430,7 @@
 					"$(PROJECT_DIR)/implement-sdk/DokuPay",
 				);
 				INFOPLIST_FILE = "implement-sdk/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.doku.implement-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,6 +446,7 @@
 					"$(PROJECT_DIR)/implement-sdk/DokuPay",
 				);
 				INFOPLIST_FILE = "implement-sdk/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.doku.implement-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
