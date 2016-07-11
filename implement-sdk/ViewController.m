@@ -23,9 +23,9 @@
 #define URL_CHARGING_DOKU_DAN_CC @"http://crm.doku.com/doku-library/example-payment-mobile/merchant-example.php"
 #define URL_CHARGING_MANDIRI_CLICKPAY @"http://crm.doku.com/doku-library/example-payment-mobile/merchant-mandiri-example.php"
 
-#define MerchantSharedKey @"aKh4dSX72d6C"
-#define MerchantSharedMallID @"1"
-#define MerchantPublicKey @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1K7HIqij8KbWNjDscMAfCnwKEr1pK8bdBQhGzRedBCBJ03ux+pZZulMq9BEREA/p2xWpMKAmSghhErGl//T1U6/0Ejvk1GOfmKqoG/az0bbdV0FRkUKxiNpaViTHz0DRe44SYE2oinl6WVQaHeYueA4PK11aynjWdmt+ZZiYYHeyOLhFxjcNb90uQBghv/kY5gnXeXMr/fUSVkMfrGvjZMyZLUmWgicWaECvH88OrtpMDQRc+jK3D+huTMqBLcotxYKEed6T8YciNTxc/JR3Y6IgFJC874/ob5XWmB+BMKTopaGPz+a+WVllbcaYbVbsZ+XwbY1Z7hG/qmmyZ1AhdQIDAQAB"
+#define MerchantSharedKey @"Kk45Ul2vMVn1"
+#define MerchantSharedMallID @"3347"
+#define MerchantPublicKey @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhu4iCtGvtBuQEaSFMp8ecPd/Qh8paYcnBY0akLldBQOrkTL0L3mbZJ9NVQtrEr23NerAvQRcT9jviCi9Zib7aY4U3mtSV79ahASSFamzIO0KMzOlO+bQhGjPXOEygYncUySurzjB70LwR47WjI+E1/DdResv4kjuZDIbc2iGsSlJjSQzFcBy7HjzJQN/FfuhP5PcOnD2aF8HvhpqIThdnt9NJnZdiC1l7h3EsD3s0jE4kb5eyfiESSgSTXk5fcRMiDpcJDG249U1Oy94t5c9u7rlQCVeW1euvcwdtxWN+IipPSZTTMOvI9NWdPfcgcCslGb70dc2hQyxnnPWSeo5ewIDAQAB"
 #define DokuPayTokenPayment @"9133428f7966395ee657e0a51c1c92dcd9bcd52f"
 #define DokuPayCustomerID @"69800071"
 
