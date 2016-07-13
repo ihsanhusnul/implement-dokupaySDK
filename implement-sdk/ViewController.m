@@ -20,14 +20,25 @@
 
 @implementation ViewController
 
-#define URL_CHARGING_DOKU_DAN_CC @"http://crm.doku.com/doku-library/example-payment-mobile/merchant-example.php"
+#define URL_CHARGING_DOKU_DAN_CC @"http://crm.doku.com/doku-library-staging/example-payment-mobile/merchant-example.php"
 #define URL_CHARGING_MANDIRI_CLICKPAY @"http://crm.doku.com/doku-library/example-payment-mobile/merchant-mandiri-example.php"
 
+// production
+/*
+ #define MerchantSharedKey @"5TgcF43EdsX3"
+ #define MerchantSharedMallID @"59"
+ #define MerchantPublicKey @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiZjidFNbzn+1C7vZG0j1oRjnKYwBjOAFs/D7yYSQ/NzkXpThYI8DcIoSXZfMRuU81uuh5Tan2WrjmXcIaJjr509vX2xAP/x7rPfgWwrlXRlC/02bH2wqULxw/hrW3GXNFA9a/OwpfKVbj5GJ3JoyBzp247mBfs38iIXNZ1NjzKhs7G42hZ88f5FNKRjQnHKOe7JjcW31oEn4WnkWfZDsdAux3cPpWw3C4FT3Ny4j/VXwcuSAnccjerkXVLK2zOncbG6abCJ74/MP5KEOnbP6nLgYJT5wsANz/Apx3mZOJj5RbX9OTz3w+p8AexScRkApVifDOnLZNHwv48aua5G6rQIDAQAB"
+ //#define DokuPayTokenPayment @"9133428f7966395ee657e0a51c1c92dcd9bcd52f"
+ #define DokuPayCustomerID @"69800071"
+ */
+
+// staging
 #define MerchantSharedKey @"Kk45Ul2vMVn1"
 #define MerchantSharedMallID @"3347"
-#define MerchantPublicKey @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhu4iCtGvtBuQEaSFMp8ecPd/Qh8paYcnBY0akLldBQOrkTL0L3mbZJ9NVQtrEr23NerAvQRcT9jviCi9Zib7aY4U3mtSV79ahASSFamzIO0KMzOlO+bQhGjPXOEygYncUySurzjB70LwR47WjI+E1/DdResv4kjuZDIbc2iGsSlJjSQzFcBy7HjzJQN/FfuhP5PcOnD2aF8HvhpqIThdnt9NJnZdiC1l7h3EsD3s0jE4kb5eyfiESSgSTXk5fcRMiDpcJDG249U1Oy94t5c9u7rlQCVeW1euvcwdtxWN+IipPSZTTMOvI9NWdPfcgcCslGb70dc2hQyxnnPWSeo5ewIDAQAB"
-#define DokuPayTokenPayment @"9133428f7966395ee657e0a51c1c92dcd9bcd52f"
+#define MerchantPublicKey @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjMahcCzTiTgYvVqviz1BM56cTLVKrwOJzMlR6Sn0iDjYXGgrt+20cfIele+MPQ8wKLTYiA5CYMspkS6jedZCn5F1BU6moG0XoeU1rIUBCDm1C1zTsTmG5Q0zaBkUZYrcuUc+/LG3i4/t70+e9O30tZPXNLTzuRgvFEL3nSfdTEqkW3wlz0AheZsALaNOcev3sJeXX2TAMt3xWkku8+3HS2bRwmlpSPFhgbOcpAT92apWvt3QHaYwnHZM2IBpOMkktJg7KOZQ7LpiyfyMFXLLmtyN2k0dgFA6S5TyPIhxuFVcfjg3xXyhXQAf0qkn1hHTxoqkEBQVz7imQhdS7G3kuQIDAQAB"
+//#define DokuPayTokenPayment @"9133428f7966395ee657e0a51c1c92dcd9bcd52f"
 #define DokuPayCustomerID @"69800071"
+
 
 #define PRICE @"15.000"
 #define QTY 1
@@ -113,7 +124,7 @@
 {
     DKPaymentItem *paymentItem = [self getPaymentItem];
     paymentItem.customerID = DokuPayCustomerID;
-    paymentItem.tokenPayment = DokuPayTokenPayment;
+    paymentItem.tokenPayment = [self getTokenPayment];
     
     DokuPay *doku = [DokuPay sharedInstance];
     doku.paymentItem = paymentItem;
@@ -212,14 +223,13 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     
-    NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
-        [SVProgressHUD dismiss];
-        
-        NSLog(@"response charging : %@", dictData);
-        
-        [self popError:error withReponse:responseObject];
-    }];
+    NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error)
+                                    {
+                                        NSLog(@"RESPONSE charging: %@", responseObject);
+                                        [SVProgressHUD dismiss];
+                                        
+                                        [self popError:error withReponse:responseObject];
+                                    }];
     
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
     [SVProgressHUD showWithStatus:@"Mohon Tunggu..."];
@@ -253,21 +263,20 @@
     [request setHTTPMethod:@"POST"];
     
     NSString *params = [NSString stringWithFormat:@"data=%@", [self jsonStringWithPrettyPrint:NO fromDictionary:dict]];
-    NSLog(@"URL_CHARGING_MANDIRI_CLICKPAY : --%@, %@", [URL absoluteString], params);
+    NSLog(@"URL_CHARGING_MANDIRI_CLICKPAY : %@, %@", [URL absoluteString], params);
     NSData *data = [params dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:data];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     
-    NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
-        [SVProgressHUD dismiss];
-        
-        NSLog(@"mandiri charging : %@", dict);
-        
-        [self popError:error withReponse:responseObject];
-    }];
+    NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error)
+                                    {
+                                        NSLog(@"mandiri charging : %@", dict);
+                                        [SVProgressHUD dismiss];
+                                        
+                                        [self popError:error withReponse:responseObject];
+                                    }];
     
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
     [SVProgressHUD showWithStatus:@"Mohon Tunggu..."];
@@ -325,6 +334,8 @@
 
 -(void)popError:(NSError*)error withReponse:(NSDictionary*)responseObject
 {
+    [self savingTokenPayment:responseObject];
+    
     UINavigationController *nav = [self.storyboard instantiateViewControllerWithIdentifier:@"tabNotif"];
     NotifViewController *vc = (NotifViewController*)nav.topViewController;
     vc.error = error;
@@ -335,6 +346,7 @@
 -(NSString*)getMyUUID
 {
     NSString *uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
     return [uuid stringByReplacingOccurrencesOfString:@"-" withString:@""];
 }
 
@@ -355,6 +367,28 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     return backItem;
+}
+
+-(void)savingTokenPayment:(NSDictionary*)responseObject
+{
+    if (responseObject[@"res_bundle_token"])
+    {
+        NSData *data = [responseObject[@"res_bundle_token"] dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *bundleToken = [NSJSONSerialization JSONObjectWithData:data
+                                                                    options:NSJSONReadingMutableContainers
+                                                                      error:nil];
+        
+        // saving tokenPayment
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        [user setObject:bundleToken[@"res_token_payment"] forKey:@"tokenPayment"];
+        [user synchronize];
+    }
+}
+
+-(NSString*)getTokenPayment
+{
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    return [user objectForKey:@"tokenPayment"];
 }
 
 @end
