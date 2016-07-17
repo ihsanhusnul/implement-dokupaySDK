@@ -33,6 +33,7 @@
 @property (nonnull, nonatomic, strong) DKNavigationController *navController;
 @property (nullable, nonatomic, strong) NSString *paymentChannel;
 @property (nullable, nonatomic, strong) DKPaymentItem *paymentItem;
+//@property (nullable, nonatomic, strong) DKUserDetail *userDetail;
 @property (nullable, nonatomic, strong) DKLayout *layout;
 @property (nullable, nonatomic, weak) id<DokuPayDelegate>delegate;
 @property (nullable, nonatomic, strong) NSTimer *timer;
