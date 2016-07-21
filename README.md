@@ -402,3 +402,6 @@ Tambahkan parameter tokenPayment di DKPaymentItem.
 paymentItem.tokenPayment = @"0bea1c1c653dbc8e1e6c24155c629fe237325a06";
 ...
 ```
+
+## 8. Other
+If you seem warning from SDK about built sdk greater than target development your app, and you do not want see again please add into Build Setting -> Other Linker Flags: "-w".
