@@ -432,7 +432,7 @@
 					"-w",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.doku.implement-sdk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.doku.implementsdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -452,7 +452,7 @@
 					"-w",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.doku.implement-sdk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.doku.implementsdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
