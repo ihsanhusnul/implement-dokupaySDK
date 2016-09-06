@@ -200,7 +200,7 @@
     paymentItem.publicKey = MerchantPublicKey;
     paymentItem.sharedKey = MerchantSharedKey;
     paymentItem.dataWords = [paymentItem generateWords];
-    paymentItem.mobilePhone = @"08123123112";
+    paymentItem.mobilePhone = @"";
     
     return paymentItem;
 }
