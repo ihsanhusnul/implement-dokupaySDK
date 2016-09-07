@@ -367,8 +367,10 @@ Yang membedakan hanya pada parameter payment channel :
 ```
 
 ## 6. Implementasi Regular Credit Card First Tokenization
-Yang membedakan hanya parameter customerID.
+Yang membedakan hanya parameter customerID dan paymentChannel.
 ```ObjC
+...
+[[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeCCFirst];
 ...
 paymentItem.customerID = @"12124";
 ...
@@ -396,8 +398,10 @@ paymentItem.customerID = @"12124";
 ```
 
 ## 7. Implementasi Regular Credit Card Second Tokenization
-Tambahkan parameter tokenPayment di DKPaymentItem.
+Tambahkan parameter tokenPayment di DKPaymentItem dan ubah nilai paymentChannel.
 ```ObjC
+...
+[[DokuPay sharedInstance] setPaymentChannel:DokuPaymentChannelTypeCCSecond];
 ...
 paymentItem.tokenPayment = @"0bea1c1c653dbc8e1e6c24155c629fe237325a06";
 ...
