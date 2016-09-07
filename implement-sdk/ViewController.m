@@ -21,7 +21,7 @@
 @implementation ViewController
 
 #define URL_CHARGING_DOKU_DAN_CC @"http://crm.doku.com/doku-library-staging/example-payment-mobile/merchant-example.php"
-#define URL_CHARGING_MANDIRI_CLICKPAY @"http://crm.doku.com/doku-library/example-payment-mobile/merchant-mandiri-example.php"
+#define URL_CHARGING_MANDIRI_CLICKPAY @"http://crm.doku.com/doku-library-staging/example-payment-mobile/merchant-mandiri-example.php"
 
 // production
 /*
